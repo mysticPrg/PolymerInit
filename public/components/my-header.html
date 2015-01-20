@@ -1,0 +1,57 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/core-header-panel/core-header-panel.html">
+<link rel="import" href="../../bower_components/core-icons/core-icons.html">
+<link rel="import" href="../../bower_components/core-toolbar/core-toolbar.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+
+<polymer-element name="my-header">
+	<template>
+		<style>
+			core-header-panel {
+				min-height: 200px;
+			}
+
+			contentDiv {
+				min-height: 100%;
+			}
+
+			paper-button[one] {
+				background: orangered;
+				color: white;
+			}
+
+			paper-button[two] {
+				background: deepskyblue;
+				color: white;
+			}
+		</style>
+
+		<core-header-panel>
+			<core-toolbar>
+				<paper-fab icon="menu"></paper-fab>
+				This is Header
+			</core-toolbar>
+
+			<div id="contentDiv" horizontal layout>
+				<paper-button raised flex one>
+					<core-icon icon="home"></core-icon>
+					Home
+				</paper-button>
+				<paper-button raised flex two>
+					<core-icon icon="favorite"></core-icon>
+					favorite
+				</paper-button>
+				<paper-button raised flex one>
+					<core-icon icon="delete"></core-icon>
+					delete
+				</paper-button>
+			</div>
+		</core-header-panel>
+	</template>
+
+	<script>
+		Polymer({});
+	</script>
+</polymer-element>

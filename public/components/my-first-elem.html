@@ -1,0 +1,33 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="my-first-elem" attributes="name">
+	<template>
+		<div>My First Element!</div>
+		<p id="contentDiv">Content:
+			<content></content>
+		</p>
+		<p on-click="{{myFunc}}">Author: {{author}}</p>
+		<p>Name: {{name}}</p>
+	</template>
+
+	<script>
+		Polymer({
+			author: 'mysticPrg',
+
+			myFunc: function () {
+				console.log('This is my Function');
+			}
+
+//			created: function () {
+//				console.log('on created!');
+//				this.age = 30;
+//			},
+//
+//			ready: function () {
+//				console.log(this.$.contentDiv);
+//				console.log(this.author);
+//				console.log(this.age);
+//			}
+		});
+	</script>
+</polymer-element>
